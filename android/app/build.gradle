@@ -8,6 +8,9 @@ plugins {
     id "dev.flutter.flutter-gradle-plugin"
 }
 
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'  
+
 android {
     namespace = "com.example.flutter_application_1"
     compileSdk = flutter.compileSdkVersion
@@ -31,6 +34,7 @@ android {
         targetSdk = flutter.targetSdkVersion
         versionCode = flutter.versionCode
         versionName = flutter.versionName
+        minSdkVersion flutter.minSdkVersion
         minSdkVersion flutter.minSdkVersion
         multiDexEnabled true
     }
